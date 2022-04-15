@@ -1,0 +1,12 @@
+kubectl patch configmap/config-domain \
+  --namespace hke-faas \
+  --type merge \
+  --patch '{"data":{"hke-faas.faas-hke-mesh-test-sh01..hellobike.cn":""}}'
+
+
+kubectl patch configmap/config-network \
+  --namespace hke-faas \
+  --type merge \
+  --patch '{"data":{"ingress.class":"kourier.ingress.networking.knative.dev"}}'
+
+https://www.bookstack.cn/read/knative-0.23-en/c44a7e7d30c67b32.md
