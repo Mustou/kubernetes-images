@@ -110,7 +110,9 @@ data:
                 endpoint:
                   address:
                     socket_address:
-                      address: "kourier-control.knative-serving"
+                      # 这个是有点问题的，应该改成hke-faas这样的ns   d
+                      # address: "kourier-control.knative-serving"
+                      address: "kourier-control.hke-faas"
                       port_value: 18000
           http2_protocol_options: {}
           type: STRICT_DNS
